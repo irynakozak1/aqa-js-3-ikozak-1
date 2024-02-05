@@ -1,8 +1,10 @@
 function divide (numerator, denominator) {
+    if (typeof denominator !== 'number' || typeof numerator !== 'number') {
+        throw new Error("Invalid argument. All arguments should be numbers.")
+    }
+
     if (denominator === 0) {
         throw new Error("Denominator can not be null.")
-    } else if ((isNaN(numerator) || isNaN(denominator))) {
-        throw new Error("Invalid argument. All arguments should be numbers.")
     }
 
     return numerator / denominator
