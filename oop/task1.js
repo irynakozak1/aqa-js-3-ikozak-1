@@ -25,4 +25,3 @@ console.log(oldest)
 console.log("---------Завдання 1.5(fromBookAndFileFormat result)---------")
 const eBook2 = EBook.fromBookAndFileFormat(book2, "PDF")
 console.log(eBook2)
-

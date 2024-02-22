@@ -50,12 +50,7 @@ export default class Book {
     }
 
     static findOldestBook(books) {
-        let oldestBook = books[0];
-        for (let i = 1; i < books.length; i++) {
-            if (books[i].year < oldestBook.year) {
-                oldestBook = books[i];
-            }
-        }
-        return oldestBook;
+        return books.reduce((oldestBook, currentBook) =>
+        currentBook.year < oldestBook.year ? currentBook : oldestBook)
     }
 }

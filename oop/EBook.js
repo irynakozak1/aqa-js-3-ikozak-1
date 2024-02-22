@@ -6,6 +6,19 @@ export default class EBook extends Book {
         this._fileFormat = fileFormat
     }
 
+    get fileFormat(){
+        return this._fileFormat
+    }
+
+    set fileFormat(value){
+        if(value !== "string"){
+            console.error("Error: File format should be type of string")
+            return
+        }
+
+        this._fileFormat = value
+    }
+
     printInfo () {
         console.log(`"${this.title}" is written by ${this.author} and it was published in ${this.year}. Book format is: ${this._fileFormat}.`)
     }
