@@ -1,5 +1,5 @@
 function printWithDelay(text, ms) {
-    setTimeout(() => console.log(text), ms)
+  setTimeout(() => console.log(text), ms);
 }
 
-printWithDelay("Довільний текст", 1000)
+printWithDelay('Довільний текст', 1000);
